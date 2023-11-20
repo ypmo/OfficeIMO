@@ -407,7 +407,7 @@ namespace OfficeIMO.Word {
         /// <param name="cellsCount"></param>
         public WordTableRow AddRow(int cellsCount = 0) {
             WordTableRow row = new WordTableRow(_document, this);
-            _table.Append(row._tableRow);
+            _table.Append(row._tableRow);           
             AddCells(row, cellsCount);
             return row;
         }

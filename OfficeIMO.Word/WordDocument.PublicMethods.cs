@@ -250,7 +250,7 @@ namespace OfficeIMO.Word {
         }
 
 
-        private List<WordParagraph> FindAndReplaceNested(List<WordParagraph> paragraphs, string textToFind, string textToReplace, ref int count, bool replace, StringComparison stringComparison = StringComparison.OrdinalIgnoreCase) {
+        public static List<WordParagraph> FindAndReplaceNested(List<WordParagraph> paragraphs, string textToFind, string textToReplace, ref int count, bool replace, StringComparison stringComparison = StringComparison.OrdinalIgnoreCase) {
             List<WordParagraph> foundParagraphs = ReplaceText(paragraphs, textToFind, textToReplace, ref count, replace, stringComparison);
             return foundParagraphs;
         }
@@ -369,7 +369,7 @@ namespace OfficeIMO.Word {
             }
             return segList;
         }
-
+      
         private List<WordParagraph> FindAndReplaceInternal(string textToFind, string textToReplace, ref int count, bool replace, StringComparison stringComparison = StringComparison.OrdinalIgnoreCase) {
             WordFind wordFind = new WordFind();
             List<WordParagraph> list = new List<WordParagraph>();
