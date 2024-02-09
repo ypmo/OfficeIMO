@@ -32,7 +32,7 @@
         <RepositoryType>git</RepositoryType>
         <SignAssembly>False</SignAssembly>
         <GenerateDocumentationFile>True</GenerateDocumentationFile>
-        <Version>0.10.0-find04</Version>
+        <Version>0.13.0-find01</Version>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
