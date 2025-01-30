@@ -6,6 +6,7 @@ namespace OfficeIMO.Word {
         public WordTableCellBorder Borders;
 
         internal TableCell _tableCell;
+        public TableCell TableCell => _tableCell;
         internal TableCellProperties _tableCellProperties;
 
         public List<WordParagraph> Paragraphs => WordSection.ConvertParagraphsToWordParagraphs(_document, _tableCell.ChildElements.OfType<Paragraph>());

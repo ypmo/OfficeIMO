@@ -6,7 +6,7 @@
         <AssemblyTitle>OfficeIMO.Word</AssemblyTitle>
 
         <VersionPrefix>0.20.0</VersionPrefix>
-        <VersionSuffix>own01</VersionSuffix>
+        <VersionSuffix>own001</VersionSuffix>
         <TargetFrameworks Condition=" '$([MSBuild]::IsOsPlatform(`Windows`))' ">net8.0</TargetFrameworks>
         <TargetFrameworks Condition=" '$([MSBuild]::IsOsPlatform(`OSX`))'  Or '$([MSBuild]::IsOsPlatform(`Linux`))' ">net8.0</TargetFrameworks>
         <GeneratePackageOnBuild>False</GeneratePackageOnBuild>

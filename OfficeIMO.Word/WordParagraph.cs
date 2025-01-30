@@ -15,7 +15,7 @@ namespace OfficeIMO.Word {
     public partial class WordParagraph : WordElement {
         internal WordDocument _document;
         internal Paragraph _paragraph;
-
+        public Paragraph Paragraph => _paragraph;
         /// <summary>
         /// This allows to know where the paragraph is located. Useful for hyperlinks or other stuff.
         /// </summary>
