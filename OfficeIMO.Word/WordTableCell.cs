@@ -10,6 +10,7 @@ namespace OfficeIMO.Word {
     public class WordTableCell {
         public WordTableCellBorder Borders;
 
+        public TableCell TableCell=>_tableCell;
         internal TableCell _tableCell;
         internal TableCellProperties _tableCellProperties;
 
