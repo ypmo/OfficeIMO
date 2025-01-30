@@ -2,6 +2,8 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using DocumentFormat.OpenXml.Packaging;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Advanced;
 using SixLabors.ImageSharp.Formats;
 
 namespace OfficeIMO.Word {
@@ -67,7 +69,8 @@ namespace OfficeIMO.Word {
         }
 
         internal static ImageCharacteristics GetImageCharacteristics(Stream imageStream) {
-            using var img = SixLabors.ImageSharp.Image.Load(imageStream, out var imageFormat);
+            using var img = SixLabors.ImageSharp.Image.Load(imageStream);
+            var imageFormat = img.Metadata.DecodedImageFormat;
             imageStream.Position = 0;
             var type = ConvertToImagePartType(imageFormat);
             return new ImageCharacteristics(img.Width, img.Height, type);
